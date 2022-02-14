@@ -1,0 +1,62 @@
+{
+  "heading": {
+    "name": "Martin Fernandez",
+    "profession": "Software Engineer"
+  },
+  "about": {
+    "about-me": "ABOUT ME",
+    "content": "Im a Software Engineer focused on JavaScript mainly with React Js library, but I’m not afraid to date with Vue or Angular, I like to learn new skills or knowledge while I am deep in the projects that I worked. Also, I like to add value to each task, ticket, code I do and help coworkers as much as possible."
+  },
+  "education": {
+    "title": "EDUCATION",
+    "generation": "2016 - 2020",
+    "degree": "Balchelor's degree in Software Engineering at Universidad de Colima"
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "works": [
+      {
+        "duration": "February 2020 - April 2020",
+        "project-name": "PVEL",
+        "rol": "Frontend Developer",
+        "technologies": ["React Js", "Material UI", "Redux toolkit"],
+        "activities": [
+          "Development of UI components",
+          "Consuming of API's",
+          "Implementation of React Hooks for functional components"
+        ]
+      },
+      {
+        "duration": "May 2020 - January 2021",
+        "project-name": "Ventacity",
+        "rol": "Frontend Developer",
+        "technologies": ["Vue Js", "Vuex"],
+        "activities": [
+          "Consuming of API's rest",
+          "Maintaining component code",
+          "Using state management",
+          "Bug fixing"
+        ]
+      },
+      {
+        "duration": "February 2021 - October 2021",
+        "project-name": "HUBB",
+        "rol": "Frontend Developer",
+        "technologies": ["Javascript", "HTML", "CSS"],
+        "activities": [
+          "Customization of web pages",
+          "Bug fixing",
+          "Creating documentation related to some functionalities"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "SKILLS",
+    "technologies": ["React Js", "Redux Js", "MongoDB", "Javascript", "Node Js"]
+  },
+  "contact": {
+    "phone": "+52 314-133-5796",
+    "mail": "jony_martinho@outlook.com"
+  }
+}

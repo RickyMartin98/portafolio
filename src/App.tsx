@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 
+import CV from './components/CV/CV';
 import Main from './components/Main';
 
 function App() {
@@ -20,7 +22,11 @@ function App() {
         >
           Learn React
         </a> */}
-        <Main />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/cv" element={<CV />} />
+        </Routes>
+        {/* <Main /> */}
       </header>
     </div>
   );
