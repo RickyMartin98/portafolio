@@ -5,6 +5,9 @@ import Header from "./Header";
 import Experience from "./Experience";
 import Skill from "./Skill";
 import Footer from "./Footer";
+import Education from './Education';
+import About from "./About";
+import Typography from '@mui/material/Typography';
 
 const CV: React.FC = () => {
   console.log(cv);
@@ -26,8 +29,10 @@ const CV: React.FC = () => {
             width: "45%",
           }}
         >
-          <h3>{cv.about["about-me"]}</h3>
-          <p>{cv.about.content}</p>
+          <About 
+            content={cv.about.content}
+            aboutMe={cv.about["about-me"]}
+          />
         </div>
         <div
           className="education"
@@ -35,11 +40,13 @@ const CV: React.FC = () => {
             width: "45%",
           }}
         >
-          <h3>{cv.education.title}</h3>
-          <div>
-            {cv.education.generation} * {cv.education.degree}
-          </div>
+          <Education 
+            title={cv.education.title}
+            degree={cv.education.degree}
+            generation={cv.education.generation}
+          />
         </div>
+          
       </div>
       <div className="experience-container">
         <div className="experience">
@@ -56,7 +63,7 @@ const CV: React.FC = () => {
         </div>
       </div>
       <div className="skills">
-        <h3>{cv.skills.title}</h3>
+        <Typography variant="h3" sx={{fontSize: "1.17em"}}>{cv.skills.title}</Typography>
         <ul style={{
               display: "flex",
               flexDirection: "column",

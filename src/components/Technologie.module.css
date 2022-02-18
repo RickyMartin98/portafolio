@@ -1,0 +1,9 @@
+.icon {
+  width: 90px;
+  height: 100px;
+  color: #F037A5;
+}
+
+.icon:hover {
+  filter: drop-shadow(0 0 20px #F037A5);
+}

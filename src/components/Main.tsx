@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import Container from "@mui/material/Container";
 import {
   IoLogoReact,
   IoLogoNodejs,
@@ -11,10 +11,20 @@ import {
 
 import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
+import TechnologieList from "./TechnologieList";
+import CustomLink from "./ui/Link";
 
-const Main = () => {
+const techArr2 = [
+  { name: "React Js", Icon: IoLogoReact },
+  { name: "Node Js", Icon: IoLogoNodejs },
+  { name: "Github", Icon: IoLogoGithub },
+  { name: "LindedIn", Icon: IoLogoLinkedin },
+  { name: "Javascript", Icon: IoLogoJavascript },
+];
+
+const Main:React.FC = () => {
   return (
-    <div>
+    <Container>
       <Header />
       <h1>Hi There!</h1>
       <h2>Thank you for being here :)</h2>
@@ -33,154 +43,28 @@ const Main = () => {
             padding: "20px",
             border: "7px solid #F037A5",
             borderRadius: "10px",
+            fontFamily: "Poppins"
           }}
         >
           I'm <code style={{ color: "#F037A5" }}>Martin Fernandez</code> and I'm
           a<code style={{ color: "#F037A5" }}> Software Developer </code> from{" "}
           <code> México. </code>
         </p>
-        <p>
-          <Link
-            to="/cv"
-            style={{
-              margin: "0 20px",
-              width: "100px",
-              height: "40px",
-              backgroundColor: "transparent",
-              color: "rgb(240, 55, 165)",
-              border: "3px solid",
-              borderRadius: "5px",
-              fontSize: "17px",
-              textDecoration: "none",
-              lineHeight: "40px",
-            }}
-          >
-            See CV
-          </Link>
-          <button
-            style={{
-              margin: "0 20px",
-              width: "120px",
-              height: "40px",
-              backgroundColor: "transparent",
-              color: "rgb(240, 55, 165)",
-              border: "3px solid",
-              borderRadius: "5px",
-            }}
-          >
-            Download CV
-          </button>
+        <p
+          style={{
+            width: "50%",
+            display: "flex",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <CustomLink to="/cv">See CV</CustomLink>
+          <CustomLink to="/cv" size="30%">Download CV</CustomLink>
         </p>
       </div>
-      <div
-        className="tecnologies"
-        style={{
-          width: "60%",
-          height: "120px",
-          display: "flex",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IoLogoReact
-            style={{
-              width: "90px",
-              height: "100px",
-              color: "#F037A5",
-            }}
-          />{" "}
-          <span>React Js</span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IoLogoNodejs
-            style={{
-              width: "90px",
-              height: "100px",
-              color: "#F037A5",
-            }}
-          />{" "}
-          <span>Node Js</span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IoLogoGithub
-            style={{
-              width: "90px",
-              height: "100px",
-              color: "#F037A5",
-            }}
-          />{" "}
-          <span style={{}}>Github</span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IoLogoJavascript
-            style={{
-              width: "90px",
-              height: "100px",
-              color: "#F037A5",
-            }}
-          />{" "}
-          <span style={{}}>Javascript</span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IoLogoSteam
-            style={{
-              width: "90px",
-              height: "100px",
-              color: "#F037A5",
-            }}
-          />{" "}
-          <span style={{}}>Steam</span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <IoLogoLinkedin
-            style={{
-              width: "90px",
-              height: "100px",
-              color: "#F037A5",
-            }}
-          />{" "}
-          <span style={{}}>LinkedIn</span>
-        </div>
-      </div>
+      <TechnologieList skills={techArr2} />
       {/* <Outlet /> */}
       <Footer />
-    </div>
+    </Container>
   );
 };
 

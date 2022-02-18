@@ -1,0 +1,29 @@
+{
+  "title": "TECHNOLOGIES",
+  "skills": [
+    {
+      "key": "IoLogoReact",
+      "name": "React Js"
+    },
+    {
+      "key": "IoLogoGithub",
+      "name": "Github"
+    },
+    {
+      "key": "IoLogoNodeJs",
+      "name": "Node Js"
+    },
+    {
+      "key": "IoLogoSteam",
+      "name": "Steam"
+    },
+    {
+      "key": "IoLogoLinkedin",
+      "name": "LinkedIn"
+    },
+    {
+      "key": "IoLogoJavascript",
+      "name": "Javascript"
+    }
+  ]
+}
